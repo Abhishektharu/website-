@@ -1,8 +1,141 @@
-<html>
-     <head>
-          
-     </head>
-     <body>
-          <p>hello world </p>
-     </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek — The Legend 😎</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 340px;
+      padding: 30px;
+      text-align: center;
+      position: relative;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #2575fc;
+      margin-bottom: 15px;
+    }
+
+    .card h1 {
+      font-size: 1.8rem;
+      margin: 10px 0 5px 0;
+      color: #222;
+    }
+
+    .card h3 {
+      color: #666;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .quote-box {
+      background: #f4f6ff;
+      border-left: 5px solid #2575fc;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-style: italic;
+      font-size: 1rem;
+      color: #444;
+      min-height: 60px;
+      transition: all 0.3s ease;
+    }
+
+    button {
+      background: #2575fc;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #6a11cb;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.85rem;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      opacity: 0.8;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Abhishek">
+    <h1>Abhishek Chaudhary 😎</h1>
+    <h3>The One & Only Legend</h3>
+
+    <div class="quote-box" id="quote">Click below to reveal the truth about me!</div>
+
+    <button onclick="showQuote()">Reveal Truth</button>
+  </div>
+
+  <footer>Made with ❤️ by Abhishek just to tease my friends!</footer>
+
+  <script>
+    const quotes = [
+      "Abhishek doesn’t need Google — Google needs Abhishek!",
+      "Some say perfection doesn’t exist… until they met Abhishek 😏",
+      "99% charm, 1% WiFi connection — that's Abhishek math!",
+      "Warning: Being friends with Abhishek causes endless laughter!",
+      "Abhishek’s brain runs faster than your internet!",
+      "Cooler than your playlist, sharper than your selfie angle.",
+      "Abhishek doesn’t make mistakes — he creates new versions!",
+      "Legend says Abhishek once debugged a bug just by looking at it 😎",
+      "Brains, looks, and humor — triple combo = Abhishek!",
+      "Keep calm and let Abhishek handle it 💪"
+    ];
+
+    function showQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = quotes[randomIndex];
+    }
+  </script>
+
+</body>
 </html>
